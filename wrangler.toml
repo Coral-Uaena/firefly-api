@@ -2,5 +2,11 @@ name = "firefly-api"
 main = "build/worker/shim.mjs"
 compatibility_date = "2025-06-22"
 
-[build]
-command = "cargo install -q worker-build && worker-build --release"
+#[build]
+#command = "cargo install -q worker-build && worker-build --release"
+
+[
+build
+]
+# 1. 先安装 Rust → 用绝对路径执行所有命令 → 明确指定根目录
+command = "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && /opt/buildhome/.cargo/bin/rustup target add wasm32-unknown-unknown && /opt/buildhome/.cargo/bin/cargo install -q worker-build && cd /opt/buildhome/repo && /opt/buildhome/.cargo/bin/worker-build --release"
