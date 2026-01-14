@@ -8,7 +8,6 @@ workers_dev = true # 部署到 *.workers.dev 子域名
 
 [build]
 command = ""
-upload = { dir = "./worker" }
 
 # 开发服务器配置（可选）
 #[dev]
