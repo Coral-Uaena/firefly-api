@@ -14,10 +14,6 @@ upload = { dir = "./worker" }
 #[dev]
 #port = 8787
 #ip = "0.0.0.0"
-
-[observability]
-enabled = false
-
 [observability]
 [observability.traces]
-enabled = false
+enabled = true
