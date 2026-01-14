@@ -1,5 +1,5 @@
 name = "firefly-api"
-main = "worker/shim.wasm"
+main = "build/worker/shim.wasm"
 compatibility_date = "2024-01-01"
 account_id = "uaena@uaena.fans" # 从 Cloudflare 面板复制
 workers_dev = true # 部署到 *.workers.dev 子域名
